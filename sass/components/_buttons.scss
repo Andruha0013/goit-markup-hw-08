@@ -1,0 +1,28 @@
+.main-btn 
+{
+    min-height: 50px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    border-color: transparent;
+    border: none;
+
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: var(--secondery-text-color);
+    background-color: var(--main-active-color);
+    
+    transition-property: background-color;
+    transition-duration: var(--main-duration-time);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: var(--main-delay-time);
+
+    &:hover, &:focus
+    {
+        background-color: #188CE8;
+    }
+}

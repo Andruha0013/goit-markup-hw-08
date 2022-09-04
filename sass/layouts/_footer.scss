@@ -1,0 +1,154 @@
+.footer-class
+{
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: #2F303A;
+}
+/*
+.address-class
+{
+}
+.address-list {
+}
+*/
+.address-list-item:not(:last-child)
+{
+    margin-bottom: 9px;
+}
+
+.address-list-link
+{
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: var(--main-leter-spacing);
+    color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: var(--main-duration-time);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: var(--main-delay-time);
+
+    &:hover, &:focus
+    {
+        color: var(--main-active-color);
+    }
+}
+
+.map-link
+{
+    color: var(--secondery-text-color);
+}
+
+.footer-logo
+{
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    display: block;
+
+}
+
+.footer-container
+{
+    display: flex;
+}
+
+.footer-social-container
+{
+    margin-left: 70px;
+
+    padding-top: 12px;
+}
+
+.footer-social-header
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--main-leter-spacing);
+    text-transform: uppercase;
+
+    color: var(--secondery-text-color);
+}
+
+.footer-social-color
+{   
+    color: var(--secondery-text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*----------------subscribe-form----------------------*/
+.subscribe-container
+{
+    margin-left: 93px;
+    padding-top: 12px;
+    min-width: 570px;
+}
+.subscribe-header 
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--main-leter-spacing);
+    text-transform: uppercase;
+
+    color: var(--secondery-text-color);
+}
+.subscribe-form
+{
+    display: flex;
+}
+.subscribe-mail 
+{
+    width: 100%;
+    padding-left: 16px;
+
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    color: var(--secondery-text-color);
+}
+.subscribe-mail::placeholder
+{
+    
+}
+.subscribe-btn 
+{
+    margin-left: 12px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    /* identical to box height, or 188% */
+
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--secondery-text-color);
+
+}
+.subscribe-svg 
+{
+    fill: currentColor;
+    margin-left: 10px;
+}
+/*------------the--end--of--FOOTER-------------------*/

@@ -1,0 +1,54 @@
+.min-gallery
+{
+    display: flex;
+}
+
+
+.min-gallery__item
+{
+    &:not(:last-child)
+    {
+        margin-right: var(--main-right-margin);
+    }
+}
+
+.min-gallery__svg-container
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    margin-bottom: 30px;
+
+    border-radius: 4px;
+
+    background-color: #F5F4FA;
+}
+
+.min-gallery__svg
+{
+
+}
+
+.min-gallery__header 
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--main-leter-spacing);
+    text-transform: uppercase;
+}
+
+.min-gallery__description
+{
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: var(--main-leter-spacing);
+    color: #757575;
+}
