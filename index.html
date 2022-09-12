@@ -14,6 +14,11 @@
 <body>
     <header class="header">
         <div class="container header__container">
+            <button class="menu__button js-open-menu">
+                <svg class="menu__svg" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
             <nav class="navigation">
                 <a class="logo navigation__logo logo--color-first link" href="./index.html"><span class="logo__first-word">Web</span>Studio</a>
                 <ul class="navigation__list list">
@@ -47,6 +52,42 @@
                 </li>
             </ul>
         </div>
+        <div class="menu__container js-menu-container">
+            <button class="menu__button js-close-menu">
+                <svg class="menu__svg" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <ul class="navigation__list list navigation__list--menu navigation__list--menu-margin">
+                <li class="navigation__item">
+                    <a class="navigation__link link current" href="./index.html">Студія</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link link" href="">Контакти</a>
+                </li>
+            </ul>
+            <ul class="contact list contact--menu contact--menu-margin">
+                <li class="contact__item">
+                    <a class="contact__link link" href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="contact__item">
+                    <a class="contact__link link" href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu-social list">
+                <li class="menu-social__item"><a class="menu-social__link link" rel="nofollow noopener noreferrer" target="_blank" href="">Instagram</a></li>
+                <li class="menu-social__item"><a class="menu-social__link link" rel="nofollow noopener noreferrer" target="_blank" href="">Twitter</a></li>
+                <li class="menu-social__item"><a class="menu-social__link link" rel="nofollow noopener noreferrer" target="_blank" href="">Facebook</a></li>
+                <li class="menu-social__item"><a class="menu-social__link link" rel="nofollow noopener noreferrer" target="_blank" href="">LinkedIn</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <!--hero-->
@@ -66,7 +107,7 @@
                 <ul class="min-gallery list">
                     <li class="min-gallery__item">
                         <div class="min-gallery__svg-container">
-                            <svg class="min-gallerye__svg" width="70" height="70">
+                            <svg class="min-gallery__svg" width="70" height="70">
                                 <use href="./images/icons.svg#icon-antenna"></use>
                             </svg>
                         </div>
@@ -120,19 +161,19 @@
                 <!--Our-projects-->
                 <ul class="pictures-list list">
                     <li class="pictures-list__item">
-                        <img class="pictures-list__img" src="./images/project1.jpg" alt="progect #1" width="370">
+                        <img class="pictures-list__img" srcset="./images/project1.jpg 1x, ./images/project1-2x.jpg 2x" src="./images/project1.jpg" alt="progect #1" width="370">
                         
                             <h3 class="pictures-list__header">Десктопні додатки</h3>
                         
                     </li>
                     <li class="pictures-list__item">
-                        <img class="pictures-list__img" src="./images/project2.jpg" alt="progect #2" width="370">
+                        <img class="pictures-list__img" srcset="./images/project2.jpg 1x, ./images/project2-2x.jpg 2x" src="./images/project2.jpg" alt="progect #2" width="370">
                         
                             <h3 class="pictures-list__header">Мобільні додатки</h3>
                         
                     </li>
                     <li class="pictures-list__item">
-                        <img class="pictures-list__img" src="./images/project3.jpg" alt="progect #3" width="370">
+                        <img class="pictures-list__img" srcset="./images/project3.jpg 1x, ./images/project3-2x.jpg 2x" src="./images/project3.jpg" alt="progect #3" width="370">
                         
                             <h3 class="pictures-list__header">Дизайнерські рішення</h3>
                         
@@ -148,7 +189,12 @@
                 <!--team-cards-->
                 <ul class="team-list list">
                     <li class="team-item">
-                        <img class="team-item-img" src="./images/employee1.jpg" alt="Молодий чоловік, 30-35 років, з невеликою борідкою в окулярах. Одягнений у коричневу сорочку" width="270">
+                        <picture>
+                            <source srcset="./images/team/img-1m.jpg 1x, ./images/team/img-1m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/team/img-1t.jpg 1x, ./images/team/img-1t-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/team/employee1.jpg 1x, ./images/team/img-1-2x.jpg 2x" media="(min-width:1200px)">
+                            <img class="team-item-img" alt="Молодий чоловік, 30-35 років, з невеликою борідкою в окулярах. Одягнений у коричневу сорочку" src="./images/team/img-1m.jpg" width="450">
+                        </picture>
                         <h3 class="team-item-header">Ігор Дем'яненко</h3>
                         <p class="team-item-description">
                             Product Designer
@@ -185,7 +231,12 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item-img" src="./images/employee2.jpg" alt="Молода жінка, 25 -28 років, блондинка, в окулярах, одягнена в білу кофту, а зверху чорний жакет" width="270">
+                        <picture>
+                            <source srcset="./images/team/img-2m.jpg 1x, ./images/team/img-2m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/team/img-2t.jpg 1x, ./images/team/img-2t-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/team/employee2.jpg 1x, ./images/team/img-2-2x.jpg 2x" media="(min-width:1200px)">
+                            <img class="team-item-img" alt="Молода жінка, 25 -28 років, блондинка, в окулярах, одягнена в білу кофту, а зверху чорний жакет" src="./images/team/img-2m.jpg" width="450">
+                        </picture>
                         <h3 class="team-item-header">Ольга Рєпіна</h3>
                         <p class="team-item-description">
                             Frontend Developer
@@ -222,7 +273,12 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item-img" src="./images/employee3.jpg" alt="Молодий чоловік, 28-30 років, з невеликою щитиною. Одягнений у сіру сорочку" width="270">
+                        <picture>
+                            <source srcset="./images/team/img-3m.jpg 1x, ./images/team/img-3m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/team/img-3t.jpg 1x, ./images/team/img-3t-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/team/employee3.jpg 1x, ./images/team/img-3-2x.jpg 2x" media="(min-width:1200px)">
+                            <img class="team-item-img" alt="Молодий чоловік, 28-30 років, з невеликою щитиною. Одягнений у сіру сорочку" src="./images/team/img-3m.jpg" width="450">
+                        </picture>
                         <h3 class="team-item-header">Микола Тарасов</h3>
                         <p class="team-item-description">
                             Marketing
@@ -259,7 +315,12 @@
                         </ul>
                     </li>
                     <li class="team-item">
-                        <img class="team-item-img" src="./images/employee4.jpg" alt="Молодий чоловік, 28-30 років, з невеликою борідкою в окулярах. Одягнений у чорний светр" width="270">
+                        <picture>
+                            <source srcset="./images/team/img-4m.jpg 1x, ./images/team/img-4m-2x.jpg 2x" media="(max-width:767px)">
+                            <source srcset="./images/team/img-4t.jpg 1x, ./images/team/img-4t-2x.jpg 2x" media="(min-width:768px)">
+                            <source srcset="./images/team/employee4.jpg 1x, ./images/team/img-4-2x.jpg 2x" media="(min-width:1200px)">
+                            <img class="team-item-img" alt="Молодий чоловік, 28-30 років, з невеликою борідкою в окулярах. Одягнений у чорний светр" src="./images/team/img-4m.jpg" width="450">
+                        </picture>
                         <h3 class="team-item-header">Михайло Єрмаков</h3>
                         <p class="team-item-description">
                             UI Designer
@@ -300,7 +361,7 @@
             </div>
         </section>
         <!--Regular-customers-->
-        <section class="customers">
+        <section class="customers section">
             <div class="container">
                 <h2 class="customers-header">
                     Постійні клієнти
@@ -354,7 +415,7 @@
     </main>
     <footer class="footer-class">
         <div class="container footer-container">
-            <div>
+            <div class="footer-address-container">
                 <a class="logo logo--color-second footer-logo link" href="./index.html"><span class="logo__first-word">Web</span>Studio</a>
                 <address class="address-class">
                     <ul class="address-list list">
@@ -468,8 +529,8 @@
                                 <svg class="checkbox-check-icon" width="11" height="8">
                                     <use href="./images/icons.svg#icon-check"></use>
                             </svg>
-                            </span>    
-                            Погоджуюся з розсилкою та приймаю
+                            </span>
+                            <span>Погоджуюся з розсилкою та приймаю</span>
                             <a class="form-agreement-link link underlining" href=""> Умови договору</a>
                         </label>
                     </li>
@@ -481,5 +542,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

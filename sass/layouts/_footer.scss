@@ -6,6 +6,16 @@
 
     background-color: #2F303A;
 }
+
+.footer-address-container
+{
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px)
+    {
+        margin-bottom: 0;
+        min-width: 230px;
+    }
+}
 /*
 .address-class
 {
@@ -53,14 +63,35 @@
 
 .footer-container
 {
-    display: flex;
+    display: block;
+    text-align: center;
+    @media screen and (min-width: 768px)
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: 1200px)
+    {
+        justify-content: left;
+        text-align: start;
+    }
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
 }
 
 .footer-social-container
 {
-    margin-left: 70px;
+    margin-bottom: 60px;
 
-    padding-top: 12px;
+    @media screen and (min-width: 1200px)
+    {
+        margin-bottom: 0;
+        margin-left: 70px;
+        padding-top: 12px;
+    }
+    
 }
 
 .footer-social-header
@@ -86,9 +117,14 @@
 /*----------------subscribe-form----------------------*/
 .subscribe-container
 {
-    margin-left: 93px;
-    padding-top: 12px;
-    min-width: 570px;
+    width: 100%;
+    @media screen and (min-width: 1200px)
+    {
+        width: fit-content;
+        margin-left: 93px;
+        padding-top: 12px;
+        min-width: 570px;
+    }
 }
 .subscribe-header 
 {
@@ -106,11 +142,30 @@
 .subscribe-form
 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (min-width: 768px)
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px)
+    {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: unset;
+    }
 }
 .subscribe-mail 
 {
     width: 100%;
+    max-width: 450px;
     padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    margin-bottom: 20px;
 
     background-color: inherit;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -118,6 +173,11 @@
     border-radius: 4px;
 
     color: var(--secondery-text-color);
+
+    @media screen and (min-width: 1200px)
+    {
+        margin-bottom: 0;
+    }
 }
 .subscribe-mail::placeholder
 {
@@ -125,7 +185,7 @@
 }
 .subscribe-btn 
 {
-    margin-left: 12px;
+    
 
     padding-top: 10px;
     padding-bottom: 10px;
@@ -144,6 +204,11 @@
     letter-spacing: 0.06em;
 
     color: var(--secondery-text-color);
+
+    @media screen and (min-width: 1200px)
+    {
+        margin-left: 12px;
+    }
 
 }
 .subscribe-svg 

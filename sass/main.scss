@@ -1,10 +1,14 @@
 @import "./base/modern-normalize";
 @import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./utils/mixins";
 @import "./layouts/body";
 @import "./base/reset";
 @import "./utils/unvisible";
 @import "./utils/hidden";
 @import "./components/container";
+@import "./components/menu";
+@import "./components/menu-social";
 @import "./layouts/header";
 @import "./components/section";
 @import "./layouts/index/hero";
