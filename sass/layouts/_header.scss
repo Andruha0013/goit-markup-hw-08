@@ -125,6 +125,8 @@
     letter-spacing: 0.02em;
     color: var(--main-text-color);
 
+    outline-color: aqua;
+
     transition-property: color;
     transition-duration: var(--main-duration-time);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,6 +138,7 @@
         padding-bottom: 32px;
         font-size: 14px;
         line-height: 1.14;
+        outline: none;
         
     }
 

@@ -325,6 +325,8 @@ body {
   overflow: hidden;
   border: 0;
   padding: 0;
+  max-width: 480px;
+  max-height: 796px;
   margin: -1px;
   visibility: hidden;
   opacity: 0;
@@ -348,7 +350,7 @@ body {
 @media screen and (max-width: 767px) {
   .menu__container {
     top: 0;
-    left: 0;
+    right: 0;
     overflow-y: scroll;
     background-color: #fff;
   }
@@ -371,6 +373,8 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     margin: 0;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     z-index: 999;
     visibility: visible;
     opacity: 1;
@@ -600,6 +604,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  outline-color: aqua;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: var(--main-duration-time);
@@ -615,6 +620,7 @@ body {
     padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.14;
+    outline: none;
   }
 }
 .navigation__link:hover, .navigation__link:focus {
