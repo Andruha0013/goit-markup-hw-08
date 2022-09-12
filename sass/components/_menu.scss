@@ -1,22 +1,31 @@
 .menu__container
 { 
-    display: none;
-    /*transform: translateX(100%);
-    transition-property: transform, display;
-    transition-duration: 5s;
+    position: fixed;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    //clip: rect(0 0 0 0);
+    //clip-path: inset(50%);
+    margin: -1px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: transparent;
+    
+    z-index: 0;
+    transition-property: transform, opacity, visibility, overflow, position,background-color,height,width, padding;
+    transition-duration: var(--main-duration-time);
     transition-timing-function: ease-in-out;
-    transition-delay: var(--main-delay-time);*/
+    transition-delay: var(--main-delay-time);
+    &.js-menu-container
+    {
+
+        transform: translateX(100%);
+    }
     @media screen and (max-width:767px)
     {
-        
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 40px;
-        padding-right: 40px;
 
         top: 0;
         left: 0;
@@ -24,16 +33,35 @@
         overflow-y: scroll;
         background-color: #fff;
 
-        &.js-menu-container
-        {
-            
-        }
+        
         &.js-menu-container.is-open
         {
             display: flex;
             position: fixed;
+            white-space: unset;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            overflow-y: scroll;
+            //clip: inherit;
+            //clip-path: none;
+
+            padding-top: 48px;
+            padding-bottom: 48px;
+            padding-left: 40px;
+            padding-right: 40px;
+
+            margin: 0;
+
             z-index: 999;
-            //transform: translateX(0)
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+            transition-property: transform, opacity, visibility, clip-path, overflow, position;
+            transition-duration: var(--main-duration-time);
+            transition-timing-function: ease-in-out;
+            transition-delay: var(--main-delay-time);
             
         }
         @media screen and (max-width: 480px)

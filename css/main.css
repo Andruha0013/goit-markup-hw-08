@@ -318,25 +318,35 @@ body {
 }
 
 .menu__container {
-  display: none;
-  /*transform: translateX(100%);
-  transition-property: transform, display;
-  transition-duration: 5s;
-  transition-timing-function: ease-in-out;
-  transition-delay: var(--main-delay-time);*/
+  position: fixed;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: transparent;
+  z-index: 0;
+  -webkit-transition-property: opacity, visibility, overflow, position, background-color, height, width, padding, -webkit-transform;
+  transition-property: opacity, visibility, overflow, position, background-color, height, width, padding, -webkit-transform;
+  transition-property: transform, opacity, visibility, overflow, position, background-color, height, width, padding;
+  transition-property: transform, opacity, visibility, overflow, position, background-color, height, width, padding, -webkit-transform;
+  -webkit-transition-duration: var(--main-duration-time);
+          transition-duration: var(--main-duration-time);
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: var(--main-delay-time);
+          transition-delay: var(--main-delay-time);
+}
+.menu__container.js-menu-container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 @media screen and (max-width: 767px) {
   .menu__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 40px;
     top: 0;
     left: 0;
     overflow-y: scroll;
@@ -347,7 +357,35 @@ body {
     display: -ms-flexbox;
     display: flex;
     position: fixed;
+    white-space: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    overflow-y: scroll;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0;
     z-index: 999;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition-property: opacity, visibility, overflow, position, -webkit-transform, -webkit-clip-path;
+    transition-property: opacity, visibility, overflow, position, -webkit-transform, -webkit-clip-path;
+    transition-property: transform, opacity, visibility, clip-path, overflow, position;
+    transition-property: transform, opacity, visibility, clip-path, overflow, position, -webkit-transform, -webkit-clip-path;
+    -webkit-transition-duration: var(--main-duration-time);
+            transition-duration: var(--main-duration-time);
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-transition-delay: var(--main-delay-time);
+            transition-delay: var(--main-delay-time);
   }
 }
 @media screen and (max-width: 767px) and (max-width: 480px) {
