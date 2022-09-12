@@ -113,8 +113,9 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
+    
+    padding-top: 77px;
+    padding-bottom: 77px;
 
     padding-left: 24px;
     padding-right: 24px;
@@ -133,6 +134,18 @@
     transition: var(--main-duration-time);
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media  screen and (min-width: 768px)
+    {
+        padding-top: 49px;
+        padding-bottom: 77px;
+    }
+
+    @media  screen and (min-width: 1200px)
+    {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     .gallery-link:hover &
     {
