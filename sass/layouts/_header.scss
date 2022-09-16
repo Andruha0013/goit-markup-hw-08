@@ -219,29 +219,23 @@
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    font-size: 34px;
-    line-height: 1.18;
-    
-    color: var(--main-active-color);
+
+    font-size: 24px;
+    line-height: 1.16;
+
+    color: #757575;
 
     &:not(:last-child)
     {
         margin-bottom: 32px;
     }
 
-    &:nth-child(2)
-    {
-        font-size: 24px;
-        line-height: 1.16;
-
-        color: #757575;
-    }
 
     @media screen and (min-width:768px)
     {
         &:not(:last-child)
         {
-        margin-bottom: 10px;
+            margin-bottom: 10px;
         }
     }
 
@@ -293,7 +287,15 @@
 
     &:hover,&:focus
     {
+        
         color: var(--main-active-color);
+        
+        @media screen and (max-width:768px)
+        {
+            font-size: 34px;
+            line-height: 1.18;
+            outline: none;
+        }
     }
 }
 
